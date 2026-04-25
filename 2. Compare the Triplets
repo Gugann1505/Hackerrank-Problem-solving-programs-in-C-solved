@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void compareTriplets(int a[3], int b[3]) {
+    int alicePoints = 0;
+    int bobPoints = 0;
+
+    for (int i = 0; i < 3; i++) {
+        if (a[i] > b[i]) {
+            alicePoints++;
+        } else if (a[i] < b[i]) {
+            bobPoints++;
+        }
+    }
+    printf("%d %d\n", alicePoints, bobPoints);
+}
+
+int main() {
+    int a[3], b[3];
+    scanf("%d %d %d", &a[0], &a[1], &a[2]);
+    scanf("%d %d %d", &b[0], &b[1], &b[2]);
+    compareTriplets(a, b);
+    return 0;
+}
